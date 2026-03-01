@@ -338,7 +338,7 @@ class _AvatarWithBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String initial =
-        name.isNotEmpty ? name.trim().characters.first : '?';
+        name.trim().isNotEmpty ? name.trim()[0] : '?';
 
     return Stack(
       clipBehavior: Clip.none,

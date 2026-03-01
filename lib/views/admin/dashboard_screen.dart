@@ -4,6 +4,7 @@ import 'approvals_screen.dart';
 import 'reports_screen.dart';
 import 'users_screen.dart';
 import 'chat_screen.dart';
+import 'hygiene_screen.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
   const AdminDashboardScreen({super.key});
@@ -65,7 +66,12 @@ class AdminDashboardScreen extends StatelessWidget {
                  _DashboardCard(
   icon: Icons.clean_hands_outlined,
   title: 'Hygiene',
-  onTap: () => _openPlaceholder(context, 'Hygiene'),
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => HygieneScreen()),
+    );
+  },
 ),
 
 
